@@ -5,6 +5,9 @@
 //Hans, if you accept, your very critical job is to write 1 good function that can take an array of files and return 1 output
 //User doesn't need to know the number of the files he provided
 //You should throw messages when user is forcing system to combine movies with different encoding levels
+//You should also optionally add a fade in and out between movies
+//User can select if it's black fade in or white fade in
+//User can select how long is the fade in (0.5 second at the end, 0.5 second at the beginning, 1 second show white screen etc.)
 //For the future:
 //This function, in the future, should also inlcude a self correction method in which the user asked if he is OK if the function 
 //converts all the movies into one common format and combines them afterwards. 
