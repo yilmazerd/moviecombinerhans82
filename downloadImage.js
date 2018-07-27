@@ -9,12 +9,10 @@ var wget = require('node-wget');
         ]
 
 function downloadImgs(imageurls){ //imageurls is an array of urls
-    //var tempar=[];
     var promises=[];
     for (var i = 0; i <=imageurls.length; i++) {
         if(typeof imageurls[i] !== "undefined"){
-            img="ERASE"+i+'.png'; //tempfolder is a global variable
-            //tempar.push(img);
+            img="ERASE"+i+'.png'; 
             let req = request(imageurls[i]);
             req.pipe(fs.createWriteStream(img));
             promises.push(req);
@@ -29,7 +27,10 @@ function downloadImgs(imageurls){ //imageurls is an array of urls
 
 };
 
-//downloadImgs(ImageURL)
+//THIS IS METHOD 1, CALLING THE CODE UP
+downloadImgs(ImageURL)
+
+//THIS IS METHOD 2, CALLING SOME OTHER LIBRARY
 for (var i = 0; i <=ImageURL.length; i++) {
     wget({url: ImageURL[0], dest: 'ERASE00'+i +' .png'}, function(){});
 }
