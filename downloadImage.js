@@ -34,3 +34,8 @@ downloadImgs(ImageURL)
 for (var i = 0; i <=ImageURL.length; i++) {
     wget({url: ImageURL[0], dest: 'ERASE00'+i +' .png'}, function(){});
 }
+
+//THIS WORKS
+async function downloadFile(req, res, turl,filename) {
+    await require('child_process').exec('wget -O ' + filename + " " + turl);
+}
